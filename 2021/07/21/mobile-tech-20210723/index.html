@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="和生创新数智中心技术博客">
+  <meta name="author" content="Edison(Chauncey.luo@hesung.com)">
+  <meta name="keywords" content="">
+  
+  <title>《和生创新移动技术周报》-- 第3期20210723 - 和生创新</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>和生创新</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="《和生创新移动技术周报》-- 第3期20210723">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Edison(Chauncey.luo@hesung.com)
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-21 17:42" pubdate>
+        2021年7月21日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">《和生创新移动技术周报》-- 第3期20210723</h1>
+            
+            <div class="markdown-body">
+              <h1 id="一、业界快讯"><a href="#一、业界快讯" class="headerlink" title="一、业界快讯"></a>一、业界快讯</h1><h2 id="大厂"><a href="#大厂" class="headerlink" title="大厂"></a>大厂</h2><h3 id="字节"><a href="#字节" class="headerlink" title="字节"></a>字节</h3><h4 id="TikTok和抖音全球总下载量突破30亿次"><a href="#TikTok和抖音全球总下载量突破30亿次" class="headerlink" title="TikTok和抖音全球总下载量突破30亿次"></a>TikTok和抖音全球总下载量突破30亿次</h4><p>7月19日消息，Sensor Tower商店情报数据显示，TikTok和抖音在全球App Store 和 Google Play总下载量已经突破30亿次，成为首款非Facebook系达成此成就的应用。今年上半年，TikTok和抖音是全球下载量和应用内购收入最高的非游戏应用，获得近3.83亿次下载，用户支出高达9.19亿美元。</p>
+<h3 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h3><h4 id="QQ-音乐新增“扑通星球”功能：强化社交属性"><a href="#QQ-音乐新增“扑通星球”功能：强化社交属性" class="headerlink" title="QQ 音乐新增“扑通星球”功能：强化社交属性"></a>QQ 音乐新增“扑通星球”功能：强化社交属性</h4><p>7月19日消息，QQ 音乐在安卓版本中最新推出了“扑通星球”功能，进一步强化 QQ 音乐的社交属性。“扑通星球”内置在 QQ 音乐的扑通社区中，有社交匹配功能，其匹配逻辑是通过双方喜欢的歌手、30 天内听过的相同歌曲。匹配成功后，双方可以直接进入聊天界面，可以用文字、图片交流，也可以分享音乐。</p>
+<p><img src="/img/img-20210723-qqmusic.png" srcset="/img/loading.gif" lazyload alt="img-20210723-qqmusic" title="qq音乐"></p>
+<h4 id="腾讯控股提出以每股513便士的现金收购Sumo-Group股票"><a href="#腾讯控股提出以每股513便士的现金收购Sumo-Group股票" class="headerlink" title="腾讯控股提出以每股513便士的现金收购Sumo Group股票"></a>腾讯控股提出以每股513便士的现金收购Sumo Group股票</h4><p>7月19日消息，据市场消息，腾讯控股(00700.HK)提出以每股513便士的现金收购英国游戏公司Sumo Group的股票，较Sumo7月16日收盘价有43.3%的溢价。根据公告，腾讯和Sumo Group的董事会已就建议的全现金收购交易的条款达成一致。</p>
+<h4 id="阿里巴巴和腾讯考虑互相开放生态系统"><a href="#阿里巴巴和腾讯考虑互相开放生态系统" class="headerlink" title="阿里巴巴和腾讯考虑互相开放生态系统"></a>阿里巴巴和腾讯考虑互相开放生态系统</h4><p>7月14日晚间，据道琼斯报道，阿里巴巴和腾讯考虑互相开放生态系统，双方都在制定放松限制的计划。具体而言，阿里巴巴的初步举措可能包括将微信支付引入淘宝和天猫；而腾讯或将允许淘系电商的内容在微信内分享，抑或允许微信用户通过小程序使用阿里巴巴的电商服务。</p>
+<p>消息发在美股开盘之前，当日美股阿里巴巴涨了近1%，腾讯涨了1.2%，而“即将被影响”的电商们都跌了，京东盘中跌了2.4%，拼多多最低跌到6%、收盘时仍跌3%。<br>各家媒体也纷纷闻讯而动，向阿里和腾讯双方求证消息的真实性，但是的确到目前双方都没有回应，也都没有出来否认消息的真实性。</p>
+<p>关联阅读推荐： <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yg4Mtj_qPL91ZNm2KM6AZw">《腾讯阿里“世纪大和解”，拼多多、字节要遭殃？》</a></p>
+<h4 id="10个互联网不正当竞争案例发布！涉腾讯、百度、淘宝、支付宝、大众点评、金山毒霸等"><a href="#10个互联网不正当竞争案例发布！涉腾讯、百度、淘宝、支付宝、大众点评、金山毒霸等" class="headerlink" title="10个互联网不正当竞争案例发布！涉腾讯、百度、淘宝、支付宝、大众点评、金山毒霸等"></a>10个互联网不正当竞争案例发布！涉腾讯、百度、淘宝、支付宝、大众点评、金山毒霸等</h4><p>7月18日消息，17日，上海浦东法院发布10个互联网不正当竞争典型案例，涉及支付宝、腾讯、陆金所、二三四五、金山毒霸、大众点评、“电视猫”、优酷、“斗鱼网”、百度、淘宝等多家知名互联网企业和平台。</p>
+<p>案例中，出现微信公众号刷流量、腾讯游戏开「外挂」、淘宝「网络抢购」服务、百度搜索关键词广告、优酷视频广告被屏蔽等多个当下热门互联网现象的判例。<br>此外，陆金所金融服务平台不正当竞争纠纷案也入选，该案为网络抢购服务的不正当竞争认定。陆金所发现外挂软件抢购理财产品并起诉，相关运营公司被判赔偿 50 万元。（来源：钛媒体）</p>
+<h3 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h3><p>7 月 20 日，百度 Apollo Robotaxi 在广州正式面向公众全面开放，成为广州目前规模最大的自动驾驶出行服务。截至目前，百度 Apollo 已在长沙、沧州、北京、广州共 4 个城市面向公众开放约车服务，是目前中国开放试运营城市数量最多的自动驾驶公司。<br>广州作为百度 Apollo 第 4 个完全开放试运营的城市，所有用户都可以通过百度地图、Apollo GO App 打到 Robotaxi。目前，Apollo Robotaxi 在广州可上下车站点达到 237 个，且数量仍在持续增长，是目前广州开放站点数量最多的自动驾驶体验服务。在科学城范围内，行驶路线途经学校、医院、公园、酒店、办公场所等各种场景，运营时间从 9:30 持续至夜间 23:00，密集的站点设置可以支持用户便捷使用 Robotaxi，满足出行需求。（来源：凤凰）</p>
+<h3 id="亚马逊"><a href="#亚马逊" class="headerlink" title="亚马逊"></a>亚马逊</h3><h4 id="蓝色起源载人太空之旅成功-贝索斯：最棒的一天"><a href="#蓝色起源载人太空之旅成功-贝索斯：最棒的一天" class="headerlink" title="蓝色起源载人太空之旅成功 贝索斯：最棒的一天"></a>蓝色起源载人太空之旅成功 贝索斯：最棒的一天</h4><p>当地时间 7 月 20 日，美国亚马逊公司创始人杰夫·贝索斯搭乘蓝色起源公司「新谢波德」航天器升空。在顺利完成太空飞行，并成功着陆后，贝索斯表示，这是「最棒的一天」。据报道，当地时间 20 日，贝索斯搭乘蓝色起源公司「新谢波德」航天器，从位于得州的一个发射台升空，开启太空之旅。「新谢波德」航天器整个飞行过程持续了约 10 分钟。</p>
+<p>贝索斯此次太空之旅的另外 3 名乘客包括，他的弟弟马克、82 岁的美国前女飞行员沃利·芬克和 18 岁的荷兰男子奥利弗·德门。<br>贝索斯周二从太空中看到的景象意味着，他亲眼看到了「地球的大气层有多么稀薄」。他说：「这真的是个支撑着所有生命的小天体。所以我们需要把所有的污染工业，所有的重工业都搬离地球。这可能需要几十年的时间，但这是我们可以去做的。」</p>
+<p>「这只是蓝色起源计划的一小步。我们真正想做的是，建造可重复使用的太空飞行器。这是修建太空之路的唯一途径，我们需要修建一条太空之路，这样我们的孩子才能建设未来。（来源：新浪科技）</p>
+<p>延伸阅读推荐：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ay66uH8uAJ54UFkA8IHl1g">《贝佐斯：这是一场「龟兔赛跑」，现在乌龟迈出了稳健的一小步》</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/tBkoO4QQ1ICd5iYAm_YjDQ">「老嬉皮士」布兰森抢先贝佐斯上天，却被嘲「离太空还有 14 公里」</a></p>
+<h3 id="Netflix"><a href="#Netflix" class="headerlink" title="Netflix"></a>Netflix</h3><p>7 月 21 日，美国视频流媒体服务提供商 Netflix 发布了 2021 财年第二季度财报。报告显示，截至 6 月 30 日，Netflix2021 财年第二季度营收为 73.42 亿美元，同比增长 19.4%；净利润为 13.53 亿美元，同步增长 87.9%；每股摊薄收益为 2.97 美元，相比之下去年同期为 1.59 美元。<br>另据财报，Netflix 在 2021 财年第二季度的营收成本为 40.18 亿美元，相比之下去年同期为 36.44 亿美元。其中，营销支出为 6.04 亿美元，技术和开发支出为 5.37 亿美元，总务和行政支出为 3.35 亿美元。<br>在用户数据方面，Netflix 第二季度全球流播放服务付费用户的总人数为 2.0918 亿人，同比增长 8.4%。Netflix 第二季度全球新增流播放服务付费用户人数为 154 万人，远低于去年同期的 1009 万人。在随后的电话会议上，Netflix CFO 斯宾塞・纽曼表示，随着疫情进入尾声，市场重启，用户获取增长出现一定程度的放缓。（来源：品玩）</p>
+<h2 id="新锐"><a href="#新锐" class="headerlink" title="新锐"></a>新锐</h2><h3 id="美团上线「美团打车」微信小程序"><a href="#美团上线「美团打车」微信小程序" class="headerlink" title="美团上线「美团打车」微信小程序"></a>美团上线「美团打车」微信小程序</h3><p>美团于近日上线了「美团打车」微信小程序。该小程序在 6 月底进行了名字更改，由「美团打车营销号」改为为「美团打车」。美团打车小程序与美团打车 App 相差无异，提供智能勾选服务，以及 23 种车型。（来源：Tech 星球）</p>
+<h3 id="北京滴滴桔宝科技有限公司成立，注册资本500万元"><a href="#北京滴滴桔宝科技有限公司成立，注册资本500万元" class="headerlink" title="北京滴滴桔宝科技有限公司成立，注册资本500万元"></a>北京滴滴桔宝科技有限公司成立，注册资本500万元</h3><p>7月18日消息 ，据天眼查App显示，7月15日，北京滴滴桔宝科技有限公司成立，注册资本500万元，法定代表人为王雪，公司经营范围含软件开发；基础软件服务；应用软件服务；计算机系统服务；销售自行开发后的产品、职业中介活动等业务。股权穿透显示，该公司为北京嘀嘀无限科技发展有限公司全资持股。</p>
+<h3 id="云视频巨头Zoom将以147亿美元收购云服务公司Five9"><a href="#云视频巨头Zoom将以147亿美元收购云服务公司Five9" class="headerlink" title="云视频巨头Zoom将以147亿美元收购云服务公司Five9"></a>云视频巨头Zoom将以147亿美元收购云服务公司Five9</h3><p>7月19日消息，Zoom已同意以股票形式以147亿美元收购Five9 ，瞄准可以支持其虚拟会议应用程序的云服务提供商。根据周日宣布的协议，Five9股东将获得0.5533股Zoom的A类普通股。交易完成后，目标公司将成为Zoom的运营子公司。交易须经股东批准，预计将于2022年上半年完成。</p>
+<h2 id="厂商动向"><a href="#厂商动向" class="headerlink" title="厂商动向"></a>厂商动向</h2><h3 id="vivo"><a href="#vivo" class="headerlink" title="vivo"></a>vivo</h3><h4 id="vivo-首款自研芯片曝光：代号「悦影」"><a href="#vivo-首款自研芯片曝光：代号「悦影」" class="headerlink" title="vivo 首款自研芯片曝光：代号「悦影」"></a>vivo 首款自研芯片曝光：代号「悦影」</h4><p>据 7 月 19 日报道，vivo 将加入自研芯片的大军，并且首款芯片已经距离量产十分接近，将很快上市，内部代号为「悦影」，下一代旗舰 vivo X70 系列可能会首发。</p>
+<p>从目前已知消息来看，vivo 首款芯片并不是一款集成的 SoC 芯片，而是一款专门提升影像能力的芯片，类似 ISP 芯片，能提升图像处理器速度、成像质量等方面的表现，这也是目前大家对手机产品最为看重的功能之一。（来源：快科技）</p>
+<h3 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h3><p>按照之前多方消息，小米将很大可能会在 8 月中下旬推出新一代平板电脑产品，应该会以小米平板 5 来命名。值得一提的是，此前消息称小米今年将在平板领域发力，共推出三款不同配置的产品，覆盖多个价位段，提升市场影响力。</p>
+<p><img src="/img/img-20210721-xiaomi.png" srcset="/img/loading.gif" lazyload alt="img-20210721-xiaomi"></p>
+<p>有网友曝光了疑似小米平板 5 中配版的官方宣传图，根据图片显示，小米平板 5 中配版与高配版设计类似，同样采用了无开孔全面屏方案。根据配置介绍显示，小米平板 5 中配版同样搭载一块 2K 分辨率显示屏，并且支持 120Hz 刷新率。值得一提的是，此前有知名爆料博主透露，这款全新的小米平板售价可能不到 1999 元。（来源：快科技）</p>
+<h3 id="特斯拉"><a href="#特斯拉" class="headerlink" title="特斯拉"></a>特斯拉</h3><h4 id="推出全自动驾驶订阅包：月费-199-美元"><a href="#推出全自动驾驶订阅包：月费-199-美元" class="headerlink" title="推出全自动驾驶订阅包：月费 199 美元"></a>推出全自动驾驶订阅包：月费 199 美元</h4><p>北京时间 7 月 18 日消息，特斯拉官方近日推出了全自动驾驶的订阅付费选项。新用户可以支付每月 199 美元，获得 FSD 全自动驾驶功能。而此前曾购买过 Enhanced Autopilot（目前已停售）的用户费用为每月 99 美元。此前，特斯拉以 10000 美元一次性完全支付的方式销售 FSD 完全自动驾驶套餐。</p>
+<h4 id="马斯克：年底将向其他电动汽车开放超级充电站"><a href="#马斯克：年底将向其他电动汽车开放超级充电站" class="headerlink" title="马斯克：年底将向其他电动汽车开放超级充电站"></a>马斯克：年底将向其他电动汽车开放超级充电站</h4><p>7 月 21 日讯，特斯拉 CEO 埃隆·马斯克 (Elon Musk) 周二发布推文称，公司将在今年晚些时候向其他电动汽车开放其超级充电站网络。随着时间的推移，特斯拉超级充电站将向所有国家开放。（来源：品玩）</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="我国老年人网络普及率为-38-6-，其中-10-万老人每天上网超-10-小时"><a href="#我国老年人网络普及率为-38-6-，其中-10-万老人每天上网超-10-小时" class="headerlink" title="我国老年人网络普及率为 38.6%，其中 10 万老人每天上网超 10 小时"></a>我国老年人网络普及率为 38.6%，其中 10 万老人每天上网超 10 小时</h3><p>北京时间 7 月 18 日消息，据央视财经报道，随着智能终端适老化改造的深入进行，互联网的门槛在老人面前变低了。更多的老人享受到互联网便利的同时，新问题随之产生。<br>数据显示，我国 60 岁及以上群体的网络普及率为 38.6%，其中，有超过 10 万老人日均在线超过 10 个小时。（来源：36Kr）</p>
+<h1 id="二、技术思考"><a href="#二、技术思考" class="headerlink" title="二、技术思考"></a>二、技术思考</h1><h3 id="IoT"><a href="#IoT" class="headerlink" title="IoT"></a>IoT</h3><h2 id="《你竟然是这样的端智能-》-字节跳动技术团队"><a href="#《你竟然是这样的端智能-》-字节跳动技术团队" class="headerlink" title="《你竟然是这样的端智能?》- 字节跳动技术团队"></a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/5i2J-b70YRynsobEQ-mydQ">《你竟然是这样的端智能?》- 字节跳动技术团队</a></h2><blockquote>
+<ul>
+<li>为什么要做端智能?</li>
+</ul>
+<p>要知道为什么做端智能本质就是需要搞清楚当前云智能面临什么样的问题。正如之前所说，云智能的发展建立在现代需求之上，它主要的优势是：</p>
+<ol>
+<li>面向海量数据，这意味我们能通过不断的累积数据，寻求问题的最优解；</li>
+<li>设备资源充足，算力强大；</li>
+<li>算法规模庞大，空间不受限制；</li>
+</ol>
+<p>但这种依赖云端的架构方式也有着相应的缺陷：</p>
+<ol>
+<li>响应速度：依赖于网络传输，稳定性和响应速度无法得到保障，对于实时性要求高的情况而言，该问题近乎于无解；</li>
+<li>非实时性，脱离即时 Context，用户敏感度差；</li>
+</ol>
+<p>而端智能的优势恰好能作为云智能劣势的补充：</p>
+<ol>
+<li>响应速度快：在端侧直接获取数据进行处理，不依赖网络传输，稳定性和响应度 OK；</li>
+<li>实时性高：端侧设备实时触达用户，不存在中间商赚差价，能够实时感应用户状态；</li>
+</ol>
+<p>除此之外，由于数据和生产和消费都是在端侧完成，对于敏感数据可以保证隐私性，规避法律风险；另外我们可以进行更精细化策略，有可能实现真正的实现千人千面。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"40c508ac0e8596d8e4f6","clientSecret":"9bf3cb211dd6c00c9c2ea6743cc7c90f146406aa","repo":"gitalk","owner":"luochenxun","admin":["name"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'd2be7109df06aba9466be0672152f412'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
