@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="和生创新数智中心技术博客">
+  <meta name="author" content="Edison(Chauncey.luo@hesung.com)">
+  <meta name="keywords" content="">
+  
+  <title>《和生创新IoT技术周刊》-- 第 7 期 20220318 - 和生创新</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>和生创新</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="《和生创新IoT技术周刊》-- 第 7 期 20220318">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Edison(Chauncey.luo@hesung.com)
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-18 14:13" pubdate>
+        2022年3月18日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      890 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">《和生创新IoT技术周刊》-- 第 7 期 20220318</h1>
+            
+            <div class="markdown-body">
+              <h1 id="一、业界快讯"><a href="#一、业界快讯" class="headerlink" title="一、业界快讯"></a>一、业界快讯</h1><h2 id="大事件"><a href="#大事件" class="headerlink" title="大事件"></a>大事件</h2><h3 id="中国提前锁定残奥会金牌榜、奖牌榜第一，创造历史"><a href="#中国提前锁定残奥会金牌榜、奖牌榜第一，创造历史" class="headerlink" title="中国提前锁定残奥会金牌榜、奖牌榜第一，创造历史"></a>中国提前锁定残奥会金牌榜、奖牌榜第一，创造历史</h3><p>北京冬奥组委会今日（13 日）在北京冬残奥会主媒体中心召开新闻发布会，北京冬奥组委主席蔡奇介绍，北京冬残奥会共产生 78 枚金牌，有 46 个国家和地区的近 600 名运动员参赛。<br>中国代表团参加了所有大项的比赛，目前居金牌榜、奖牌榜第一位，创造了历史。各项赛事精彩纷呈，向全世界展示了残奥运动员自强不息、坚韧不拔的精神力量。<br>据了解，北京 2022 年冬残奥会将于 13 日晚闭幕。其于本月 4 日启幕，共 9 个比赛日。此次北京冬残奥会，中国体育代表团由 217 人组成，其中运动员 96 人，参加全部 6 个大项、73 个小项的角逐。（来源：快科技）</p>
+<h2 id="厂商动向"><a href="#厂商动向" class="headerlink" title="厂商动向"></a>厂商动向</h2><h3 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h3><h4 id="华为新机或许采用「物理外挂」手机壳实现-5G-通信"><a href="#华为新机或许采用「物理外挂」手机壳实现-5G-通信" class="headerlink" title="华为新机或许采用「物理外挂」手机壳实现 5G 通信"></a>华为新机或许采用「物理外挂」手机壳实现 5G 通信</h4><p>3 月 13 日消息，因受到芯片供应制裁，华为目前旗下的新机几乎都仅支持 4G 网络，仅能利用库存保持一段时间的产品供应。不过有博主爆料，华为可能会另辟蹊径，用特殊的方法使 4G 手机支持 5G。<br>方法就是使用「物理外挂」，5G 手机壳。据博主 @厂长是关同学 爆料：今年华为发布的所有手机还是只有 4G 版本。但是通过手机壳可以做到 5G 的效果，至于效率如何，现在还不好说。该博主还透露接下来的新机是 nova10 系列和 Mate50 系列。</p>
+<h4 id="华为-3-月-16-日将发布新一代全屋智能"><a href="#华为-3-月-16-日将发布新一代全屋智能" class="headerlink" title="华为 3 月 16 日将发布新一代全屋智能"></a>华为 3 月 16 日将发布新一代全屋智能</h4><p>3 月 13 日消息，华为消费者业务 CEO 余承东表示，华为将在 3 月 16 日发布新一代全屋智能。<br>余承东透露，新一代全屋智能能够根据当前场景自动调节适宜的灯光氛围、温度、检测室内空气状态等。比如在观影模式下，窗帘会自动关闭，灯光自动调暗，智慧屏与音箱也将自动组成环绕立体声播放，带来沉浸的视听体验。另外，华为也首次将智能驾驶领域的毫米波传感技术应用于家庭，这款全新的 AI 超感传感器拥有更高的感知精度和更全面的感知能力，为家的智能化创造更丰富的想象空间。（来源：Pingwest）</p>
+<h3 id="特斯拉"><a href="#特斯拉" class="headerlink" title="特斯拉"></a>特斯拉</h3><h4 id="研究称马斯克-2024-年成为全球首位「万亿富豪」"><a href="#研究称马斯克-2024-年成为全球首位「万亿富豪」" class="headerlink" title="研究称马斯克 2024 年成为全球首位「万亿富豪」"></a>研究称马斯克 2024 年成为全球首位「万亿富豪」</h4><p>云计算采购解决方案提供商 Approve.com 最新一项研究显示，特斯拉 CEO 伊隆·马斯克（Elon Musk）有望在 2024 年成为全球首位「万亿富豪」（trillionaire）。</p>
+<p>彭博亿万富豪指数（Bloomberg Billionaires Index）显示，马斯克目前是全球首富，净资产 2210 亿美元。而 Approve.com 的研究显示，基于 129% 的年增长率，2024 年马斯克的净资产将达到 1 万亿美元。</p>
+<p>马斯克的财富主要来自他经营的两家公司，即电动汽车公司特斯拉和太空探索技术公司。除了 Approve.com 的研究，在社交媒体上，许多网民也认为马斯克将成为全球首位万亿富豪。（来源：新浪科技）</p>
+<h2 id="互联网动态"><a href="#互联网动态" class="headerlink" title="互联网动态"></a>互联网动态</h2><h3 id="一句话新闻"><a href="#一句话新闻" class="headerlink" title="一句话新闻"></a>一句话新闻</h3><h1 id="二、技术精选"><a href="#二、技术精选" class="headerlink" title="二、技术精选"></a>二、技术精选</h1><h2 id="技术思考"><a href="#技术思考" class="headerlink" title="技术思考"></a>技术思考</h2><h2 id="IoT"><a href="#IoT" class="headerlink" title="IoT"></a>IoT</h2><h2 id="app"><a href="#app" class="headerlink" title="app"></a>app</h2><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/09/mobile-tech-20220318/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">《和生创新IoT技术周刊》-- 第 8 期 20221014</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/04/mobile-tech-20220304/">
+                        <span class="hidden-mobile">《和生创新IoT技术周刊》-- 第 6 期 20220304</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"40c508ac0e8596d8e4f6","clientSecret":"9bf3cb211dd6c00c9c2ea6743cc7c90f146406aa","repo":"hscomments","owner":"luochenxun","admin":["luochenxun"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'd09d78e2929ee5dc2527635667162d26'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
