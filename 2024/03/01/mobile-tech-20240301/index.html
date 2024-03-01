@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="和生创新数智中心技术博客">
+  <meta name="author" content="Edison(Edison.luo@hesung.com)">
+  <meta name="keywords" content="">
+  
+  <title>《和生创新 IoT 技术周刊》-- 第 12 期 20240301 - 和生创新</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"172dfc2c9782963ca405ff775ccd78e1","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>和生创新</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="《和生创新 IoT 技术周刊》-- 第 12 期 20240301">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Edison(Edison.luo@hesung.com)
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-03-01 16:51" pubdate>
+        2024年3月1日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">《和生创新 IoT 技术周刊》-- 第 12 期 20240301</h1>
+            
+            <div class="markdown-body">
+              <h1 id="一、业界快讯"><a href="#一、业界快讯" class="headerlink" title="一、业界快讯"></a>一、业界快讯</h1><h2 id="1-1-一周新闻快讯"><a href="#1-1-一周新闻快讯" class="headerlink" title="1.1 一周新闻快讯"></a>1.1 一周新闻快讯</h2><h3 id="【科技快讯】"><a href="#【科技快讯】" class="headerlink" title="【科技快讯】"></a>【科技快讯】</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bJ4m1e7Jz/?spm_id_from=333.337.search-card.all.click">三星首次公开展示智能戒指 Galaxy Ring ==&gt;  介绍视频</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qu4m1c79F/?spm_id_from=333.337.search-card.all.click&vd_source=c637507040c3247a145eb00daf7d77ae">特斯拉再次展示第二代人形机器人 Optimus 步行能力：更加稳健流畅 ==&gt;  介绍视频</a></p>
+<p>埃隆马斯克的 AI 机器人 Optimus 擎天柱二代最新进展<br>埃隆马斯克在 1 月 15 日公布了 AI 机器人叠衣服的视频；1 月 30 日公布了相比于去年 5 月，AI 机器人走路动作更加流畅、接近人类步伐；以及近日发布了第二代人形机器人擎天柱（Optimus）迈着稳健的步伐自主行走。</p>
+<h3 id="【AI-新闻】AI-RAN-联盟在今日的-2024-上-MWC-上正式成立"><a href="#【AI-新闻】AI-RAN-联盟在今日的-2024-上-MWC-上正式成立" class="headerlink" title="【AI 新闻】AI-RAN 联盟在今日的 2024 上 MWC 上正式成立"></a>【AI 新闻】AI-RAN 联盟在今日的 2024 上 MWC 上正式成立</h3><p>AI-RAN 联盟在今日的 2024 上 MWC 上正式成立，将重点关注利用 AI/ML（人工智能和机器学习）的技术来提高 RAN 的频谱、成本和能源效率。</p>
+<p>目前共有 11 家公司与组织加入该联盟，其中包括三星、Arm、爱立信、微软、诺基亚、NVIDIA、软银和东北大学。（来源：品玩）</p>
+<h3 id="【AI-新闻】-谷歌-DeepMind-推出-Genie-模型：110-亿个参数，基于图片和提示词生成-2D-游戏"><a href="#【AI-新闻】-谷歌-DeepMind-推出-Genie-模型：110-亿个参数，基于图片和提示词生成-2D-游戏" class="headerlink" title="【AI 新闻】 谷歌 DeepMind 推出 Genie 模型：110 亿个参数，基于图片和提示词生成 2D 游戏"></a>【AI 新闻】 谷歌 DeepMind 推出 Genie 模型：110 亿个参数，基于图片和提示词生成 2D 游戏</h3><p>2 月 27 日，谷歌宣布旗下的 DeepMind 团队近日推出 <code>Genie</code> 的全新 AI 模型，共有 110 亿个参数，能够基于用户输入的一张图片和提示词，生成一款较为完整的 2D 平台游戏。</p>
+<h3 id="【AI-新闻】字节发布文生图开放模型-SDXL-Lightning"><a href="#【AI-新闻】字节发布文生图开放模型-SDXL-Lightning" class="headerlink" title="【AI 新闻】字节发布文生图开放模型 SDXL-Lightning"></a>【AI 新闻】字节发布文生图开放模型 SDXL-Lightning</h3><p>从知情人士处获悉，字节发布文生图开放模型 <code>SDXL-Lightning</code>。</p>
+<p>从 AI 开源社区 Hugging Face 的最新榜单上，已经可以查询到该模型。<code>SDXL-Lightning</code> 跻身模型趋势榜，同时也成为 Hugging Face Spaces 上的热门模型。</p>
+<p>与 <code>SDXL-Lightning</code> 一同上榜的，是谷歌新近推出的「最强开放大模型」Gemma 系列，以及 Stability AI 的新一代文生图模型 Stable Cascade。</p>
+<p>据知情人士透露，字节跳动的 <code>SDXL-Lightning</code> 通过渐进式对抗蒸馏的技术，实现前所未有的生成速度。该模型能够在 2 步或 4 步内生成极高质量和分辨率的图像，将生成速度加快十倍，是 1024 分辨率下速度最快的文生图模型，计算成本则降低为十分之一。（来源：界面）</p>
+<h3 id="【AI-延展阅读】智能机器人公司「宇树科技-Unitree」宣布完成近-10-亿元-B2-轮融资"><a href="#【AI-延展阅读】智能机器人公司「宇树科技-Unitree」宣布完成近-10-亿元-B2-轮融资" class="headerlink" title="【AI 延展阅读】智能机器人公司「宇树科技 Unitree」宣布完成近 10 亿元 B2 轮融资"></a>【AI 延展阅读】智能机器人公司「宇树科技 Unitree」宣布完成近 10 亿元 B2 轮融资</h3><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/facQIi63aiAKBjuheCENGQ">==&gt; 了解宇树科技</a></p>
+<h2 id="1-2-国外大厂"><a href="#1-2-国外大厂" class="headerlink" title="1.2 国外大厂"></a>1.2 国外大厂</h2><h3 id="【苹果】苹果取消电动汽车项目，2000-人转岗做-AI"><a href="#【苹果】苹果取消电动汽车项目，2000-人转岗做-AI" class="headerlink" title="【苹果】苹果取消电动汽车项目，2000 人转岗做 AI"></a>【苹果】苹果取消电动汽车项目，2000 人转岗做 AI</h3><p>2 月 28 日，据外媒报道，援引内部消息人士透露，苹果公司已搁置并取消了自动驾驶电动汽车的所有开发计划。苹果汽车项目启动已有十多年时间，期间投入了数十亿美元，但最终决定这不是一个可行的项目。</p>
+<p>知情人士表示，苹果于本周二向内部员工披露了上述决定，令参与该项目的近 2000 名员工倍感震惊。据悉，苹果首席运营官杰夫·威廉姆斯和负责该项目的副总裁凯文·林奇共同作出了这一艰难抉择。</p>
+<p>这两位高管告知员工，该项目将开始逐步缩减规模，而汽车团队（即特殊项目团队，简称 SPG）的众多成员将被调往人工智能部门，这些员工将专注于推动生成式人工智能项目，这已成为苹果日益重要的战略重心。</p>
+<p>苹果汽车团队中还包括数百名硬件工程师和汽车设计师，这些人也可能面临重新分配至其他苹果团队的情况。苹果将会进行裁员，但具体裁员人数尚未明朗。苹果公司对此消息拒绝置评。（来源：DoNews）</p>
+<p><strong>多个传言称，苹果将在 iOS 18 中添加新的生成式人工智能功能，并计划利用人工智能提升许多内置 iOS 应用程序的功能。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/5_zVwMLTA9O9SvvFTFZZtw">==&gt; 延伸阅读</a></p>
+<h3 id="【苹果】古尔曼：有屏版-HomePod-最早明年问世，苹果已与海外供应商进行早期合作"><a href="#【苹果】古尔曼：有屏版-HomePod-最早明年问世，苹果已与海外供应商进行早期合作" class="headerlink" title="【苹果】古尔曼：有屏版 HomePod 最早明年问世，苹果已与海外供应商进行早期合作"></a>【苹果】古尔曼：有屏版 HomePod 最早明年问世，苹果已与海外供应商进行早期合作</h3><p>2 月 25 日消息，彭博社在最新一期「Power On」时事通讯中披露了苹果公司「有屏版」HomePod 的更多信息：配备类似 iPad 显示屏的 HomePod 正在研发中，但你可能没法指望很快就能买到。</p>
+<p>古尔曼称自己多年来曾多次介绍苹果「考虑推出」的各种家居产品，包括一款将 Apple TV、FaceTime、HomePod 整合在一起的设备，还有一款屏幕可像机械臂一样旋转的 HomePod，乃至可磁吸在墙面上的类 iPad 智能屏。「多年来，苹果公司在智能家居领域一直举棋不定，我也没有看到表明这种情况有所改变的任何迹象。」（来源：IT 之家）</p>
+<h3 id="【特斯拉】特斯拉再次展示第二代人形机器人-Optimus-步行能力：更加稳健流畅"><a href="#【特斯拉】特斯拉再次展示第二代人形机器人-Optimus-步行能力：更加稳健流畅" class="headerlink" title="【特斯拉】特斯拉再次展示第二代人形机器人 Optimus 步行能力：更加稳健流畅"></a>【特斯拉】特斯拉再次展示第二代人形机器人 Optimus 步行能力：更加稳健流畅</h3><p>特斯拉公司于周六通过其社交媒体账号分享了一段最新视频，展示其正在研发的 <code>Optimus 人形机器人</code>的流畅步行能力。视频展示了该机器人在测试场地内行走，并配有诙谐的标题「完成每日步数目标」。<br>相比几周前发布的视频，此次展示的擎天巨臂似乎是更新或更加完善的版本，其在行走过程中步伐更稳健，动作也更加流畅。（来源：IT 之家）</p>
+<h3 id="【三星】三星首款智慧戒指-Galaxy-Ring-首次亮相-MWC"><a href="#【三星】三星首款智慧戒指-Galaxy-Ring-首次亮相-MWC" class="headerlink" title="【三星】三星首款智慧戒指 Galaxy Ring 首次亮相 MWC"></a>【三星】三星首款智慧戒指 Galaxy Ring 首次亮相 MWC</h3><p>三星电子 26 日在西班牙巴塞罗那举行的 2024 年世界移动通信大会（MWC 2024）上首次展示旗下首款智能戒指<code>「Galaxy Ring」</code>。</p>
+<p>Galaxy Ring 计划年内面市，有黑色、金色、银色三种配色和 9 个尺寸供选择。Galaxy Ring 内侧装载可监测用户生物数据的多个传感器。三星电子介绍，该智能戒指在睡觉时佩戴舒适，可详测健康生物数据。具体配置在正式发布前不对外公开。</p>
+<p>这是三星电子当地时间上月 17 日在美国加州的新品发布会上公开 Galaxy Ring 预告片后，时隔一个多月展示「真身」。三星电子曾表示，戒指比与智能手表更适合长时间佩戴，且更侧重于健身功能，电池寿命更长。因此，预计该产品主要针对「睡眠辅助」功能。</p>
+<p>Galaxy Ring 的具体上市时期尚不确定，但业界预测，三星电子将 7～8 月举行的下半年新品发布会上正式推出该产品。（消息来源：韩联社）</p>
+<h2 id="1-3-国内大厂"><a href="#1-3-国内大厂" class="headerlink" title="1.3 国内大厂"></a>1.3 国内大厂</h2><h3 id="【华为】荣耀-MWC-发布-AI-使能的全场景战略"><a href="#【华为】荣耀-MWC-发布-AI-使能的全场景战略" class="headerlink" title="【华为】荣耀 MWC 发布 AI 使能的全场景战略"></a>【华为】荣耀 MWC 发布 AI 使能的全场景战略</h3><p><a target="_blank" rel="noopener" href="https://www.hihonor.com/cn/news/honor-lobal-launch-event-mwc-2024/">==&gt; 延伸阅读</a></p>
+<p>荣耀在 2024 MWC 世界移动通信大会上正式发布了全新的 AI 使能的全场景战略，推出平台级 AI 赋能，以人为中心的跨操作系统体验和基于意图识别的全新人机交互，以及与全球合作伙伴合作的荣耀 Magic6 Pro，AI PC 荣耀 MagicBook Pro 16 等一系列智能设备。</p>
+<p>荣耀终端有限公司 CEO 赵明表示：“在人工智能时代，荣耀致力于提供以人为中心的开放、无缝的体验，满足消费者的需求和痛点。我们很高兴地宣布在全球推出全新的荣耀智能手机和 AI PC，它们以行业领先的 AI 能力真正彻底改变了用户体验，同时突破了人机交互的界限。”</p>
+<h3 id="【阿里】阿里云全线下调云产品售价，平均降价幅度超-20"><a href="#【阿里】阿里云全线下调云产品售价，平均降价幅度超-20" class="headerlink" title="【阿里】阿里云全线下调云产品售价，平均降价幅度超 20%"></a>【阿里】阿里云全线下调云产品售价，平均降价幅度超 20%</h3><p>2 月 29 日，几乎是在战略发布会宣布降价的同时，阿里云官网便全面下调了云产品售价。据悉，本轮降价涉及 100 多款产品、500 多个产品规格，覆盖计算、存储、数据库等所有核心产品，平均降价幅度超过 20%，最高降幅达 55%。（来源：每日经济新闻）</p>
+<h3 id="【百度】文心大模型推理成本已降低至原本的-1"><a href="#【百度】文心大模型推理成本已降低至原本的-1" class="headerlink" title="【百度】文心大模型推理成本已降低至原本的 1%"></a>【百度】文心大模型推理成本已降低至原本的 1%</h3><p>2 月 28 日晚，在百度 2023 年第四季度及全年财报电话会上，百度创始人、董事长兼首席执行官李彦宏透露，自发布以来，百度不断降低文心大模型的推理成本，目前已降低至去年 3 月版本的 1%。</p>
+<p>李彦宏同时表示，文心大模型的日调用量已超过 5000 万次，季度环比增长 190%；12 月，约有 2.6 万家企业调用文心大模型，季度环比增长 150%。</p>
+<p>2023 年第四季度，百度智能云总营收 84 亿元，其中大模型为云业务带来约 6.6 亿元增量收入。（来源：36 氪）</p>
+<h3 id="【比亚迪】比亚迪开年组织变阵：整合智驾和智舱、成立海外产品研究院"><a href="#【比亚迪】比亚迪开年组织变阵：整合智驾和智舱、成立海外产品研究院" class="headerlink" title="【比亚迪】比亚迪开年组织变阵：整合智驾和智舱、成立海外产品研究院"></a>【比亚迪】比亚迪开年组织变阵：整合智驾和智舱、成立海外产品研究院</h3><p>2 月 26 日消息，比亚迪两大研发中心规划院和工程院迎来新一轮组织变阵。</p>
+<p>比亚迪规划院的智能网联中心与智能驾驶中心将整合，共同成立智能化技术研究院，原智能网联中心主任刘柯和智能驾驶研发中心主任韩冰，均纳入其中。</p>
+<p>这意味着比亚迪的智舱业务和智驾业务将在不同层面实现联动，知情人士称，「智能化技术研究院中，产品管理中心已经横跨智驾和座舱业务，其他部门仍是智驾开发中心和座舱开发中心的子部门，保持着独立。」</p>
+<p>智舱中心和智驾中心的融合，在比亚迪的技术战略中早有信号。1 月 16 日的比亚迪梦想日发布会上，公司副总裁杨冬生宣布，比亚迪未来将全球首搭算力达到 1000T 以及 2000T 的「舱驾一体」芯片。舱驾一体首先可以在硬件物料上节省成本，同时底层很多的软件开发工作也可以整合，是多重的降本方案，尤其适合面向中低端市场的车型。</p>
+<p>此次比亚迪整合两大智能化技术部门，既有为驾舱一体的研发做好组织架构层面支持的准备，也有集中力量补齐智驾短板的考虑。（消息来源：36 氪）</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/">技术周报</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/02/23/mobile-tech-20240223/">
+                        <span class="hidden-mobile">《和生创新 IoT 技术周刊》-- 第 11 期 20240223</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"40c508ac0e8596d8e4f6","clientSecret":"9bf3cb211dd6c00c9c2ea6743cc7c90f146406aa","repo":"hscomments","owner":"luochenxun","admin":["luochenxun"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '30effed619d663834899b8d161c40f96'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://www.hesung.com/" target="_blank" rel="nofollow noopener"><span>关于和生创新</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?172dfc2c9782963ca405ff775ccd78e1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
